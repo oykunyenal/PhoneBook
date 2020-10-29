@@ -23,6 +23,16 @@ namespace PhoneBook.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Index(String name, String surname, String phoneNumber, String email)
+        {
+            ViewBag.Name = string.Format("Name : {0}", name);
+            ViewBag.Surname = string.Format("Surname : {0}", surname);
+            ViewBag.Phone = string.Format("Phone : {0}", phoneNumber);
+            ViewBag.Email = string.Format("Email : {0}", email);
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
